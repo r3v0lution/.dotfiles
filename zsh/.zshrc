@@ -113,12 +113,17 @@ source $ZSH/oh-my-zsh.sh
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
 
+
+eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"
+
+
 # ----- FZF -----
 
 # Set up FZF key bindings and fuzzy completion
-eval "$(fzf --bash)"
+eval "$(fzf --zsh)"
 
 alias ls='eza --color=always --long --icons=always --no-time'
 
 # thefuck alias
 eval $(thefuck --alias)
+
