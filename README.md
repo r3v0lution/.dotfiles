@@ -1,26 +1,26 @@
 ### .dotfiles repo
 
 # Installs list of predetermined packages
- 'sudo apt install \
+ `sudo apt install \
 	zsh \
 	git \
 	neovim \
 	stow \
 	fzf \
 	ripgrep \
-	bat \'
+	bat \`
 
 # Stows dotfiles containing package configs
-'stow nvim
+`stow nvim
 stow zsh
-stow p10k'
+stow p10k`
 
 # Adds zsh to login shells & changes default shell
-'command -v zsh | sudo tee -a /etc/shells'
-'sudo chsh -s $(which zsh) $USER
+`command -v zsh | sudo tee -a /etc/shells`
+`sudo chsh -s $(which zsh) $USER`
 
 # Install neovim plugins
-'nvim --headless +PlugInstall +qall'
+`nvim --headless +PlugInstall +qall`
 
 
 ## Issues
