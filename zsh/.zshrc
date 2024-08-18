@@ -127,3 +127,7 @@ alias ls='eza --color=always --long --icons=always --no-time'
 # thefuck alias
 eval $(thefuck --alias)
 
+
+# Created by `pipx` on 2024-07-12 00:16:47
+export PATH="$PATH:/home/jeremy/.local/bin"
+
