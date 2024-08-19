@@ -12,8 +12,7 @@ sudo chmod 644 /etc/apt/keyrings/gierens.gpg /etc/apt/sources.list.d/gierens.lis
 sudo apt update
 
 
-sudo apt -y eza \
-	install \
+sudo apt install -y eza \
 	zsh \
 	git \
 	neovim \
@@ -36,6 +35,7 @@ sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/too
 
 # install powerlevel10k
 git clone --depth=1 https://github.com/romkatv/powerlevel10k.git ${ZSH_CUSTOM:-$HOME/.oh-my-zsh/custom}/themes/powerlevel10k
+sudo rm -r ~/.zshrc
 
 # stow .dotfiles
 stow nvim
