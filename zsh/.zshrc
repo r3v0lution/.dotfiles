@@ -73,7 +73,7 @@ alias ohmyzsh="nvim ~/.oh-my-zsh"
 alias vim="nvim"
 
 # Set up FZF key bindings and fuzzy completion
-eval "$(fzf --zsh)"
+[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 
 alias ls='eza --color=always --long --icons=always --no-time'
 
@@ -83,5 +83,6 @@ eval $(thefuck --alias)
 
 # Created by `pipx` on 2024-07-12 00:16:47
 export PATH="$PATH:/home/jeremy/.local/bin"
+
 
 

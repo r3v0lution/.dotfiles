@@ -18,9 +18,12 @@ sudo apt -y eza \
 	git \
 	neovim \
 	stow \
-	fzf \
 	ripgrep \
 	bat \
+
+# install fzf from github
+git clone --depth 1 https://github.com/junegunn/fzf.git ~/.fzf
+~/.fzf/install
 
 # add zsh to login shells
 command -v zsh | sudo tee -a /etc/shells
@@ -28,10 +31,11 @@ command -v zsh | sudo tee -a /etc/shells
 # use zsh as default shell
 sudo chsh -s $(which zsh) $USER
 
-
-
 # install oh-my-zsh
 sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
+
+# install powerlevel10k
+git clone --depth=1 https://github.com/romkatv/powerlevel10k.git ${ZSH_CUSTOM:-$HOME/.oh-my-zsh/custom}/themes/powerlevel10k
 
 # stow .dotfiles
 stow nvim
@@ -39,4 +43,7 @@ stow zsh
 stow p10k
 
 # install neovim plugins
-nvim --headless +PlugInstall +qall
+#nvim --headless +PlugInstall +qall
+
+
+source ~/.zshrc
